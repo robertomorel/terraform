@@ -9,7 +9,7 @@
 # Local file consegue criar um arquivo no computador
 resource "local_file" "exemplo" {
   content  = var.conteudo
-  filename = "Roberto - Fullcycle Course"
+  filename = "Roberto - Fullcycle Course.txt"
 }
 
 # Variáveis
@@ -30,6 +30,7 @@ variable "conteudo" {
 #    -> "terraform apply"
 #    -> O Terraform mostra o plano de ação e pergunta se queremos aplicar as mudanças (criações, modificações, deleções)
 
+## Outputs
 output "id-do-arquivo" {
   value = resource.local_file.exemplo.id
 }
@@ -37,3 +38,17 @@ output "id-do-arquivo" {
 output "conteudo" {
   value = var.conteudo
 }
+
+## Data Sources
+data "local_file" "conteudo-exemplo" {
+  filename = "Roberto - Fullcycle Course.txt"
+}
+
+output "data-source-result" {
+  value = data.local_file.conteudo-exemplo.content
+}
+
+output "data-source-result-base64" {
+  value = data.local_file.conteudo-exemplo.content_base64
+}
+
