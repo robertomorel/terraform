@@ -2,7 +2,7 @@
 
 O Terraform Cloud permite automação de infraestrutura para provisionamento, conformidade e gerenciamento de qualquer nuvem, datacenter e serviço.
 
-> Clique (aqui)[https://www.terraform.io/] para documentação
+> Clique [aqui](https://www.terraform.io/) para documentação
 
 - É uma ferramenta OpenSource
 - Desenvolvido em Golang
@@ -15,7 +15,7 @@ O Terraform Cloud permite automação de infraestrutura para provisionamento, co
   - Cluster Kubernetes
 - Utiliza a linguagem HCL
   - HashiCorp Configuration Language
-- Instalação (aqui)[https://developer.hashicorp.com/terraform/downloads]
+- Instalação [aqui](https://developer.hashicorp.com/terraform/downloads)
 
 ## Idempotência
 
@@ -45,7 +45,7 @@ Sem o state, sempre teríamos que começar todo o plano de ação do zero.
 
 ### Providers
 
-O Terraform tem uma (lista de providers)[https://registry.terraform.io/browse/providers] com o que trabalha.
+O Terraform tem uma [lista de providers](https://registry.terraform.io/browse/providers) com o que trabalha.
 
 - Oficiais
 - Verificados
