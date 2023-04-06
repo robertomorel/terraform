@@ -165,8 +165,5 @@ Virtual Private Cloud: rede com acesso limitado
 - Podemos configurar subredes (subnet) com zonas de disponibilidades diferentes
 
 <p align="center">
-<a href="https://www.facebook.com/techfortaleza"><img height="30" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/facebook-square-color-icon.svg"></a>&nbsp;&nbsp;
-<a href="https://www.instagram.com/roberto.morel/"><img height="30" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/ig-instagram-icon.svg"></a>&nbsp;&nbsp;
-<a href="https://www.linkedin.com/in/roberto-morel-6b9065193/"><img height="30" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-icon.svg"></a>&nbsp;&nbsp;
-<a href="https://github.com/robertomorel/"><img height="30" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-icon.svg"></a>&nbsp;&nbsp;
+  <a href="Virtual Private Cloud Model"><img height="30" src="./assets/img/vpc.png"></a>
 </p>
