@@ -119,3 +119,54 @@ Outputs:
 conteudo = "Valor do output"
 id-do-arquivo = "630d8851ec1f909e4e41e608fd0f54763a612791"
 ```
+
+## Data Source
+
+É utilizada para consultar a infra corrente já configurada.
+Ler aquilo que já foi configurado
+
+- Resources: o que nos ajuda a criar a infra
+- Data Source: o que lê a infra
+
+- Before
+
+```json
+data "local_file" "conteudo-exemplo" {
+  filename = "Roberto - Fullcycle Course.txt"
+}
+
+output "data-source-result" {
+  value = data.local_file.conteudo-exemplo.content
+}
+
+output "data-source-result-base64" {
+  value = data.local_file.conteudo-exemplo.content_base64
+}
+```
+
+- Output
+
+```
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+conteudo = "Valor do output"
+data-source-result = "Valor do output"
+data-source-result-base64 = "VmFsb3IgZG8gb3V0cHV0"
+id-do-arquivo = "630d8851ec1f909e4e41e608fd0f54763a612791"
+```
+
+## VPC
+
+Virtual Private Cloud: rede com acesso limitado
+
+- Exemplo: AWS
+- Podemos configurar subredes (subnet) com zonas de disponibilidades diferentes
+
+<p align="center">
+<a href="https://www.facebook.com/techfortaleza"><img height="30" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/facebook-square-color-icon.svg"></a>&nbsp;&nbsp;
+<a href="https://www.instagram.com/roberto.morel/"><img height="30" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/ig-instagram-icon.svg"></a>&nbsp;&nbsp;
+<a href="https://www.linkedin.com/in/roberto-morel-6b9065193/"><img height="30" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-icon.svg"></a>&nbsp;&nbsp;
+<a href="https://github.com/robertomorel/"><img height="30" src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-icon.svg"></a>&nbsp;&nbsp;
+</p>
