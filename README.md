@@ -167,3 +167,45 @@ Virtual Private Cloud: rede com acesso limitado
 <p align="center">
   <a href="Virtual Private Cloud Model"><img height="300" src="./assets/img/vpc.png"></a>
 </p>
+
+### AWS
+
+1. Criar conta na [AWS](https://aws.amazon.com/)
+2. Criar um novo usuário para não utilizar o root
+
+- Permissão: AdministratorAccess
+
+3. Criar e configurar [AWS CLI](https://aws.amazon.com/cli/)
+
+- Rode: 'aws configure'
+- Informe a access key, secret e região
+
+4. Criar VPC
+
+- Criar arquivo "aws/providers.tf"
+- Criar arquivo "aws/vpc.tf"
+  - https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc
+- Criar as subnets no "aws/vpc.tf"
+
+### Módulos
+
+O módulo é um conceito que pega um agrupamento de resources e unifica em um único arquivo.
+O módulo pode ser todo executado de uma vez só.
+
+#### Uso
+
+Exemplo:
+
+```
+module "eks" {
+    source = "./modules/eks"
+    prefix = var.prefix
+    vpc_id = module.new-vpc.vpc_id
+    cluster_name = var.cluster_name
+    retention_days = var.retention_days
+    subnet_ids = module.new-vpc.subnet_ids
+    desired_size = var.desired_size
+    max_size = var.max_size
+    min_size = var.min_size
+}
+```
